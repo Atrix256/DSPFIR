@@ -12,10 +12,15 @@ typedef std::complex<float> complex;
 
 complex Z(int delay, float angle)
 {
+    return std::polar(1.0f, float(delay)*angle);
+
+    // the below is the same as the above
+    /*
     complex ret;
     ret.real(cos(float(delay)*angle));
     ret.imag(sin(float(delay)*angle));
     return ret;
+    */
 }
 
 // Not called, but shows how to apply an order 1 filter
