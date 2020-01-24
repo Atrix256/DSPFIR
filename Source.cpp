@@ -116,7 +116,7 @@ void ReportOrder2Filter(const char* fileName, float a0, float alpha1, float alph
         if (discriminant < 0.0f)
             right.imag(sqrt(-discriminant) / 2.0f);
         else
-            right.imag(sqrt(discriminant) / 2.0f);
+            right.real(sqrt(discriminant) / 2.0f);
 
         zero1 = left - right;
         zero2 = left + right;
